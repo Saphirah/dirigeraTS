@@ -154,11 +154,10 @@ await client.devices.setCustomName({
 })
 
 // low level method to set attributes, use device type specific apis if possible
-await client.devices.setAttributes({
+await client.devices.setAttribute({
   id: 'YOUR_DEVICE_ID',
-  attributes: {
-    // ...
-  },
+  key: 'colorHue',
+  value: 0.5,
   transitionTime: 5000, // optional, in milliseconds
 })
 
@@ -466,11 +465,10 @@ await client.deviceSets.updateConfiguration({
   remoteLinkIds: ['YOUR_REMOTE_ID'], // optional
 })
 
-await client.deviceSets.setAttributes({
+await client.deviceSets.setAttribute({
   id: 'YOUR_DEVICE_SET_ID',
-  attributes: {
-    // ...
-  },
+  key: " colorHue",
+  value: 0.5
   transitionTime: 5000, // optional, in milliseconds
 })
 ```
@@ -514,12 +512,11 @@ await client.rooms.setIsOn({
   isOn: true,
 })
 
-await client.rooms.setAttributes({
+await client.rooms.setAttribute({
   id: 'YOUR_ROOM_ID',
   deviceType: 'light', // optional filter by device type
-  attributes: {
-    // ...
-  },
+  key: "colorSaturation",
+  value: 0.5
   transitionTime: 5000, // optional
 })
 ```
