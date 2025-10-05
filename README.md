@@ -156,7 +156,7 @@ await client.devices.setCustomName({
 // low level method to set attributes, use device type specific apis if possible
 await client.devices.setAttribute({
   id: 'YOUR_DEVICE_ID',
-  key: 'colorHue',
+  key: 'DEVICE_ATTRIBUTE_KEY',
   value: 0.5,
   transitionTime: 5000, // optional, in milliseconds
 })
@@ -467,8 +467,8 @@ await client.deviceSets.updateConfiguration({
 
 await client.deviceSets.setAttribute({
   id: 'YOUR_DEVICE_SET_ID',
-  key: " colorHue",
-  value: 0.5
+  key: ' colorSaturation',
+  value: 0.5,
   transitionTime: 5000, // optional, in milliseconds
 })
 ```
@@ -515,8 +515,8 @@ await client.rooms.setIsOn({
 await client.rooms.setAttribute({
   id: 'YOUR_ROOM_ID',
   deviceType: 'light', // optional filter by device type
-  key: "colorSaturation",
-  value: 0.5
+  key: 'colorSaturation',
+  value: 0.5,
   transitionTime: 5000, // optional
 })
 ```
